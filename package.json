@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node dist/index.js",
     "dev": "nodemon server.js",
-    "build": "ncc build server.js -o dist && copyfiles .env dist/ && copyfiles -u 1 \"../assets/**/*\" dist/ && node -e \"require('fs').mkdirSync('dist/css', {recursive: true})\""
+    "build": "npx ncc build server.js -o dist && copyfiles .env dist/ && copyfiles -u 1 \"../assets/**/*\" dist/ && node -e \"require('fs').mkdirSync('dist/css', {recursive: true})\""
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
